@@ -1,0 +1,9 @@
+# Automail Software Design 
+This is an assignment of one of my subjects. The context for this assignment is that mails are collected and delivered by Regular in the Automail Software System Design. 
+Software principles applied for this project: Polymorphism, Pure Fabrication, Indirection, Low coupling, High cohesion. 
+
+
+However, because of the high demands for delivery, me and my teammates have applied Polymorphism which is one of the GRASP principles to add 2 more types of robots called Fast Robots and Bulk Robots. Those 3 robots inherit from the abstract parent class called Robots. Any common behaviors among these 3 robots are in the parent class while varying behaviors are implemented in child classes -> low coupling ,increases efficiency for our software architecture design. 
+
+As a business, we also need to charge clients. The total charge is service fees (look up to the WifiModem) + delivery fees depending types of robots. Insteading of calculating the service fee by looking up at the WifiModem , we add the third party WIFI Apdater and connect our domain system to this third party. Then this third party will be connected with WifiModem -> provide indirection, Pure Fabrication, High cohesion.
+
